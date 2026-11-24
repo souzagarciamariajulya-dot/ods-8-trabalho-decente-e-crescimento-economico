@@ -6,9 +6,14 @@
     box-sizing: border-box;
 }
 
+/* Fundo do site */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #7d1533;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #000000;
     line-height: 1.7;
 }
@@ -23,7 +28,7 @@ main {
 section {
     max-width: 900px;
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.88);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -36,6 +41,24 @@ h1 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 25px;
+    position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #a21942,
+        #7d1533,
+        transparent
+    );
+    margin: 12px auto 0;
+    border-radius: 5px;
 }
 
 /* Subtítulos */
@@ -48,6 +71,23 @@ h2 {
     padding-left: 12px;
 }
 
+/* Linha decorativa para separar conteúdos */
+hr {
+    border: none;
+    height: 2px;
+    width: 80%;
+    margin: 30px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #a21942,
+        #7d1533,
+        #a21942,
+        transparent
+    );
+    border-radius: 5px;
+}
+
 /* Parágrafos */
 p {
     font-size: 16px;
@@ -55,7 +95,7 @@ p {
     margin-bottom: 18px;
 }
 
-/* Imagem */
+/* Imagens do conteúdo */
 img {
     display: block;
     width: 100%;
@@ -64,12 +104,79 @@ img {
     margin: 25px auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
 }
 
 /* Efeito ao passar o mouse */
 img:hover {
     transform: scale(1.02);
+}
+
+/* Botões */
+.meu-botao {
+    display: inline-block;
+    background-color: #a21942;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px 5px;
     transition: 0.3s;
+}
+
+/* Efeito dos botões */
+.meu-botao:hover {
+    background-color: #7d1533;
+    transform: scale(1.05);
+}
+
+/* Linha decorativa com detalhe no meio */
+.linha-decorada {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.linha-decorada::before,
+.linha-decorada::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: #a21942;
+}
+
+.linha-decorada span {
+    color: #a21942;
+    font-size: 24px;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.90);
+    border-top: 5px solid #a21942;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto do rodapé */
+footer p {
+    color: #333333;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 /* Responsividade para celulares */
@@ -94,29 +201,18 @@ img:hover {
     p {
         font-size: 15px;
     }
-}
 
-/* Botões */
-.meu-botao {
-    display: inline-block;
-    background-color: #a21942;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 10px 5px;
-    transition: 0.3s;
-}
+    hr {
+        width: 90%;
+    }
 
-/* Efeito ao passar o mouse */
-.meu-botao:hover {
-    background-color: #7d1533;
-    transform: scale(1.05);
-}
+    footer {
+        padding: 25px 10px;
+    }
 
-/* Rolagem suave */
-html {
-    scroll-behavior: smooth;}
+    footer .meu-botao {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+    }
+}
