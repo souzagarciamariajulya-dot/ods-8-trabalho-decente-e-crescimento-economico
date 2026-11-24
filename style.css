@@ -1,0 +1,122 @@
+
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #000000;
+    line-height: 1.7;
+}
+
+/* Conteúdo principal */
+main {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* Seção do conteúdo */
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #a21942;
+}
+
+/* Título principal */
+h1 {
+    color: #a21942;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Subtítulos */
+h2 {
+    color: #a21942;
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-left: 5px solid #a21942;
+    padding-left: 12px;
+}
+
+/* Parágrafos */
+p {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+/* Imagem */
+img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao passar o mouse */
+img:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+
+    main {
+        padding: 15px 10px;
+    }
+
+    section {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Botões */
+.meu-botao {
+    display: inline-block;
+    background-color: #a21942;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.meu-botao:hover {
+    background-color: #7d1533;
+    transform: scale(1.05);
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;}
